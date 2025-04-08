@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react";
 
 import Head from "next/head";
 import Navigation from "./nav";
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -32,11 +32,7 @@ const Layout: FC<Props> = ({ title, blog, children }) => (
       ></meta>
       <link rel="alternate icon" type="image/png" href="/favicon-32x32.png" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link
-        rel="alternate"
-        type="application/rss+xml"
-        href="/_next/static/feed.xml"
-      />
+      <link rel="alternate" type="application/rss+xml" href="/blog/index.xml" />
     </Head>
     <main className={roboto.className}>
       <Navigation blog={blog} />

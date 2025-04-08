@@ -23,10 +23,15 @@ $tk-lib-tracing: $purple;
 $tk-lib-bytes: $blue;
 
 // Per lib styling: [ name, color, size, logo-adjust ]
-$libs: "tokio" black 3.8rem -60%, "runtime" $tk-lib-runtime 2.2rem -22%,
-  "hyper" $tk-lib-hyper 100% -50%, "tonic" $tk-lib-tonic 100% -25%,
-  "tower" $tk-lib-tower 100% -52%, "mio" $tk-lib-mio 100% -41%,
-  "tracing" $tk-lib-tracing 100% -31%, "bytes" $tk-lib-bytes 100% -30%;
+$libs:
+  "tokio" black 3.8rem -60%,
+  "runtime" $tk-lib-runtime 2.2rem -22%,
+  "hyper" $tk-lib-hyper 100% -50%,
+  "tonic" $tk-lib-tonic 100% -25%,
+  "tower" $tk-lib-tower 100% -52%,
+  "mio" $tk-lib-mio 100% -41%,
+  "tracing" $tk-lib-tracing 100% -31%,
+  "bytes" $tk-lib-bytes 100% -30%;
 
 // Bulma color variables
 $primary: $cream;
@@ -94,6 +99,20 @@ a:active {
 :root {
   overflow-y: scroll;
   overscroll-behavior-y: none;
+}
+
+.content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    code {
+      // use the same `font-weight` as the parent element
+      font-weight: unset;
+    }
+  }
 }
 
 .navbar {
@@ -934,7 +953,7 @@ Docco style used in http://jashkenas.github.com/docco/ converted by Simon Madine
 
 .hljs {
   display: block;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .hljs-comment,
